@@ -853,27 +853,49 @@ ul { list-style: none; }
 }
 .location-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2.5rem;
+  align-items: stretch;
 }
-.loc-detail {
+/* Info cards */
+.loc-card {
   display: flex;
-  gap: 1rem;
   align-items: flex-start;
-  margin-bottom: 1.6rem;
+  gap: 1rem;
+  background: var(--white);
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: .75rem;
+  transition: var(--transition);
 }
-.loc-detail i {
-  font-size: 1.2rem;
+.loc-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.07); transform: translateY(-2px); }
+.loc-card-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--green-pale);
   color: var(--green-mid);
-  margin-top: .15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   flex-shrink: 0;
-  width: 24px;
 }
-.loc-detail strong { display: block; font-weight: 600; margin-bottom: .3rem; color: var(--text-dark); }
-.loc-detail p { color: var(--text-light); font-size: .92rem; line-height: 1.5; }
-.loc-detail a { color: var(--green-mid); }
-.loc-detail a:hover { text-decoration: underline; }
+.loc-card strong { display: block; font-size: .88rem; font-weight: 700; color: var(--text-dark); margin-bottom: .25rem; }
+.loc-card p { color: var(--text-light); font-size: .84rem; line-height: 1.55; margin: 0; }
+.loc-card a { color: var(--green-mid); font-weight: 500; }
+.loc-card a:hover { text-decoration: underline; }
+.loc-directions-btn { width: 100%; justify-content: center; margin-top: .5rem; }
+/* Map */
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+  border: 4px solid var(--white);
+}
 
 /* ============================================================
    FOOTER
