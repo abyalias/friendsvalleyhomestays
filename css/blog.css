@@ -1,0 +1,265 @@
+/* ============================================================
+   BLOG STYLES — Friends Valley Home Stays
+   ============================================================ */
+
+/* ── Blog Page Hero ── */
+.blog-page-hero {
+  padding: 7rem 0 4rem;
+  background: var(--cream);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.blog-page-hero .section-title { margin-top: .5rem; }
+
+/* ── Blog Listing ── */
+.blog-listing { padding: 5rem 0; background: var(--white); }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.blog-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.blog-card-img-link { display: block; }
+.blog-card-img {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.blog-card:hover .blog-card-img { transform: scale(1.03); }
+
+.blog-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--green-mid);
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .8rem;
+  border-radius: 50px;
+}
+
+.blog-card-body { padding: 1.8rem; }
+
+.blog-meta {
+  display: flex;
+  gap: 1.2rem;
+  font-size: .78rem;
+  color: var(--text-light);
+  margin-bottom: .9rem;
+}
+.blog-meta i { color: var(--green-mid); margin-right: .3rem; }
+
+.blog-card-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.35;
+  margin-bottom: .8rem;
+}
+.blog-card-body h2 a:hover { color: var(--green-mid); }
+
+.blog-card-body p {
+  font-size: .9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  transition: var(--transition);
+}
+.blog-read-more:hover { gap: .7rem; color: var(--green-dark); }
+
+/* ── Post Hero ── */
+.post-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.post-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,15,10,.92) 0%, rgba(10,30,20,.5) 60%, rgba(5,15,10,.2) 100%);
+}
+.post-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3.5rem;
+  color: var(--white);
+}
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.75);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.post-back:hover { color: var(--white); gap: .7rem; }
+.post-hero-content .blog-tag { position: static; display: inline-block; margin-bottom: 1rem; }
+.post-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  max-width: 760px;
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: .82rem;
+  color: rgba(255,255,255,.75);
+}
+.post-meta i { color: var(--green-light); margin-right: .3rem; }
+
+/* ── Post Body ── */
+.post-content { padding: 4rem 0 5rem; background: var(--white); }
+.post-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.post-lead {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--green-pale);
+}
+
+.post-container p {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.post-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin: 2.5rem 0 1rem;
+  line-height: 1.3;
+}
+
+/* Info Box */
+.post-infobox {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green-mid);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.8rem;
+  margin: 2rem 0;
+}
+.post-infobox h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+.post-infobox h3 i { color: var(--green-mid); margin-right: .5rem; }
+.post-infobox ul { list-style: none; padding: 0; }
+.post-infobox li {
+  font-size: .9rem;
+  color: var(--text-mid);
+  padding: .4rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: .5rem;
+}
+.post-infobox li:last-child { border-bottom: none; }
+.post-infobox li strong { color: var(--text-dark); min-width: 180px; flex-shrink: 0; }
+
+/* Tip Box */
+.post-tip {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #f0fdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+}
+.post-tip i { color: var(--green-mid); font-size: 1.2rem; margin-top: .15rem; flex-shrink: 0; }
+.post-tip strong { display: block; color: var(--green-dark); margin-bottom: .3rem; }
+.post-tip div { font-size: .9rem; color: var(--text-mid); line-height: 1.6; }
+
+/* CTA Box */
+.post-cta {
+  background: var(--green-dark);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.post-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: .6rem;
+}
+.post-cta p { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; font-size: .95rem; }
+.post-cta .btn { margin: .4rem; }
+.btn-outline-green {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,.5);
+}
+.btn-outline-green:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .post-hero { height: 55vh; }
+  .post-infobox li { flex-direction: column; gap: .2rem; }
+  .post-infobox li strong { min-width: unset; }
+  .blog-page-hero { padding: 6rem 0 3rem; }
+}

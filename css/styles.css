@@ -898,6 +898,79 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   TRAVEL STORIES (homepage section)
+   ============================================================ */
+.travel-stories { padding: 6rem 0; background: var(--cream); }
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.story-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.story-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.story-img-link { display: block; overflow: hidden; }
+.story-img {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .4s ease;
+}
+.story-card:hover .story-img { transform: scale(1.04); }
+.story-tag {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--green-mid);
+  color: var(--white);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .28rem .75rem;
+  border-radius: 50px;
+}
+.story-body { padding: 1.6rem; }
+.story-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: .76rem;
+  color: var(--text-light);
+  margin-bottom: .75rem;
+}
+.story-meta i { color: var(--green-mid); margin-right: .25rem; }
+.story-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.35;
+  margin-bottom: .7rem;
+}
+.story-body h3 a:hover { color: var(--green-mid); }
+.story-body p {
+  font-size: .88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+}
+.story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  transition: var(--transition);
+}
+.story-link:hover { gap: .7rem; color: var(--green-dark); }
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
