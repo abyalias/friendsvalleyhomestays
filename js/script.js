@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const startSlider = () => {
-    sliderTimer = setInterval(() => goToSlide(current + 1), 5500);
+    sliderTimer = setInterval(() => goToSlide(current + 1), 3000);
   };
 
   dots.forEach(dot => {
